@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+
+    <div id="app">
+        <div v-if="showBooks">
+            <h1>{{ title }}</h1>
+            <p>{{age}}</p>
+
+        </div>
+    <p v-show="showBooks">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque vitae illo voluptas natus beatae laboriosam repellendus velit blanditiis eligendi quod quasi numquam incidunt, omnis eius dolore sunt, a excepturi. Dolor?</p>
+        <button @click ="toggleShowBooks">
+
+            <span v-if="showBooks">Hide Books</span>
+            <span v-else>Show Books</span>
+        </button>
+
+        <button v-on:click="age++">Increase Age</button>
+        <button v-on:click="age--">Decrease Age</button>
+        <button @click="changeTitle('Munna')">Change Title</button>
+
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
